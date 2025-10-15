@@ -1,1 +1,8 @@
+REF:
 https://de.nothing.tech/products/ear-3?Farbe=Schwarz
+
+Icons:
+https://phosphoricons.com/
+https://lucide.dev/
+
+
