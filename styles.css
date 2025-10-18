@@ -1,59 +1,154 @@
-body {
-  margin: 0;
-  height: 100vh;
-  font-family: "DotGothic16", sans-serif;
-  background: linear-gradient(180deg, #d7dee1 0%, #b6c4c9 100%);
-  position: relative;
-  overflow: hidden;
+:root{
+  --bg: #e9eef1;
+  --fg: #0b0f14;
+  --fg-dim: #3c4550;
+  --glass: rgba(255,255,255,0.65);
+  --ring: rgba(0,0,0,0.12);
+  --blur: 18px;
+  --radius: 18px;
+  --speed: 300ms;
 }
 
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "DotGothic16", sans-serif;
+  color: var(--fg);
+  background: radial-gradient(1200px 800px at 70% 10%, #eff3f6 10%, #dde5ea 55%, #cdd7de 100%);
+}
 
-body::before {
-  content: "";
-  position: absolute;
+/* Notch header */
+.header_container{position:sticky;top:0;z-index:20;padding:10px}
+.top_notch_container{
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:900px;margin:0 auto;background:var(--glass);
+  border:1px solid var(--ring);backdrop-filter: blur(var(--blur));
+  padding:10px 14px;border-radius:16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+.notch_center p{
+  margin:0;letter-spacing:.08em;font-weight:600;color:var(--fg-dim);
+}
+
+.icon_btn{
+  appearance:none;background:transparent;border:0;padding:6px;border-radius:10px;cursor:pointer;
+}
+.icon_btn:focus{outline:2px solid #0002;outline-offset:2px}
+.icon_btn img{width:22px;height:22px;display:block}
+
+/* Glider (overlay) */
+
+.glider {
+  position: fixed;
   inset: 0;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.4;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(240, 244, 247, 0.3); /* subtle glass backdrop */
+  backdrop-filter: blur(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
   pointer-events: none;
 }
 
-.header_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-  position: relative;
+.glider[open] {
+  opacity: 1;
+  pointer-events: all;
 }
 
-.top_notch_container {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+.glider[hidden] {
+  display: none;
+}
+
+/* --- Inner container (the “notch” box) --- */
+.glider_inner {
+  width: min(400px, 90vw);
+  height: min(600px, 80vh);
+  background: linear-gradient(180deg, #f9fbfc 0%, #edf2f5 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.glider[open] .glider_inner {
+  transform: translateY(0);
+}
+
+/* --- Header --- */
+.glider_header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 310px;
-  height: 36px;
-  background: #fff;
-  backdrop-filter: blur(10px);
-  border-radius: 80px;
-  border: 8px solid rgba(255, 255, 255, 0.4);
-  padding: 0 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.top_notch_container img {
+.glider_header .brand {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-family: 'DotGothic16', monospace;
+}
+
+.icon_btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.icon_btn img {
   width: 16px;
   height: 16px;
-  cursor: pointer;
 }
 
-.notch_center p {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  color: #222;
+/* --- Menu links --- */
+.glider_nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+  font-family: 'DotGothic16', monospace;
+}
+
+.glider_link {
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.glider_link:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* --- Footer --- */
+.glider_footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  opacity: 0.7;
+}
+
+.glider_footer a {
+  text-decoration: none;
+  color: inherit;
 }

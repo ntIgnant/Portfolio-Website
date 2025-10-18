@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main Page</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"> <!-- DotGothic16 font -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignacio Aguirre — Portfolio</title>
+
+  <!-- DotGothic16 for the dotted menu look -->
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="header_container">
-      <div class="top_notch_container">
-        <div class="notch_left">
-          <img src="assets/img/list.svg" alt="menu icon">
-        </div>
-        <div class="notch_center">
-          <p>IGNACIO AGUIRRE</p>
-        </div>
-        <div class="notch_right">
-          <img src="assets/img/bag.svg" alt="bag icon">
-        </div>
+  <!-- Header / notch -->
+  <header class="header_container">
+    <div class="top_notch_container">
+      <button id="menuToggle"
+              class="notch_left icon_btn"
+              aria-label="Open menu"
+              aria-haspopup="dialog"
+              aria-expanded="false">
+        <img src="assets/img/list.svg" alt="" />
+      </button>
+
+      <div class="notch_center">
+        <p>IGNACIO AGUIRRE</p>
       </div>
+
+      <a class="notch_right icon_btn" href="#contact" aria-label="Go to contact">
+        <img src="assets/img/bag.svg" alt="" />
+      </a>
     </div>
   </header>
+
+  <!-- GLIDER (overlay) -->
+  <aside id="glider" class="glider" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden>
+    <div class="glider_inner" tabindex="-1">
+      <div class="glider_header">
+        <button id="menuClose" class="icon_btn" aria-label="Close menu">
+          <!-- you can reuse list.svg as an “X” or use a close icon -->
+          ✕
+        </button>
+        <p id="menuTitle" class="brand">IGNACIO (IA)</p>
+        <span aria-hidden="true" class="status_dot"></span>
+      </div>
+
+      <nav class="glider_nav" aria-label="Main">
+        <!-- Change hrefs to your routes/sections -->
+        <a class="glider_link" href="#about">ABOUT ME</a>
+        <a class="glider_link" href="#projects">PROJECTS</a>
+        <a class="glider_link" href="#skills">SKILLS</a>
+        <a class="glider_link" href="#blog">BLOG</a>
+        <a class="glider_link" href="#contact">CONTACT</a>
+      </nav>
+
+      <footer class="glider_footer">
+        <a href="mailto:hello@yourdomain.com">EMAIL</a>
+        <a href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GITHUB</a>
+        <a href="assets/ignacio_cv.pdf" target="_blank" rel="noreferrer">CV</a>
+      </footer>
+    </div>
+  </aside>
   <script src="script.js"></script>
 </body>
 </html>
