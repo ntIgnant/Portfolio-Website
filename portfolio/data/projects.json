@@ -1,0 +1,24 @@
+[
+  {
+    "id": "ear3",
+    "title": "Ear(3) Landing Clone",
+    "blurb": "Pixel-accurate clone with accessible notch nav and dot grid background.",
+    "year": "2025",
+    "role": "Frontend",
+    "tags": ["web", "ui"],
+    "image": "assets/img/ear3.webp",
+    "demo": "https://your-demo-link",
+    "source": "https://github.com/you/ear3"
+  },
+  {
+    "id": "mltool",
+    "title": "Image Classifier",
+    "blurb": "CNN trained on custom dataset with Grad-CAM visualizations.",
+    "year": "2024",
+    "role": "ML",
+    "tags": ["ml"],
+    "image": "assets/img/mltool.webp",
+    "demo": "#",
+    "source": "https://github.com/you/mltool"
+  }
+]
