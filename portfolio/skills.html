@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ignacio Aguirre — Portfolio</title>
+
+    <!-- DotGothic16 for the dotted menu look -->
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/skills.css">
+</head>
+
+<body>
+    <!-- Header / notch -->
+    <header class="header_container">
+        <div class="top_notch_container">
+            <button id="menuToggle" class="notch_left icon_btn" aria-label="Open menu" aria-haspopup="dialog"
+                aria-expanded="false">
+                <img src="assets/img/icon/list.svg" alt="" />
+            </button>
+
+            <div class="notch_center">
+                <p>IGNACIO AGUIRRE</p>
+            </div>
+
+            <a class="notch_right icon_btn" href="#contact" aria-label="Go to contact">
+                <img src="assets/img/icon/bag.svg" alt="" />
+            </a>
+        </div>
+    </header>
+
+    <!-- GLIDER (overlay) -->
+    <aside id="glider" class="glider" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden>
+        <div class="glider_inner" tabindex="-1">
+            <div class="glider_header">
+                <button id="menuClose" class="icon_btn" aria-label="Close menu">
+                    ✕
+                </button>
+                <p id="menuTitle" class="brand">IGNACIO AGUIRRE</p>
+                <span aria-hidden="true" class="status_dot"></span>
+            </div>
+
+            <nav class="glider_nav" aria-label="Main">
+                <a class="glider_link" href="main.html">HOME</a>
+                <a class="glider_link" href="projects.html">PROJECTS</a>
+                <a class="glider_link" href="skills.html">SKILLS</a>
+                <a class="glider_link" href="aboutme.html">ABOUT ME</a>
+                <a class="glider_link" href="contact.html">CONTACT</a>
+            </nav>
+
+            <footer class="glider_footer">
+                <a href="mailto:ignacio.aguirre.armijos@gmail.com">EMAIL</a>
+                <a href="https://github.com/ntIgnant" target="_blank" rel="noreferrer">GITHUB</a>
+                <a href="assets/ignacio_cv.pdf" target="_blank" rel="noreferrer">CV</a>
+            </footer>
+        </div>
+    </aside>
+    <main class="skills_wall">
+        <div id="floatLayer" aria-label="Floating skills"></div>
+    </main>
+
+    <script type="module" src="js/skills.js" defer></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
