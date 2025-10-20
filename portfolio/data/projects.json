@@ -1,13 +1,13 @@
 [
   {
-    "id": "ear3",
-    "title": "Ear(3) Landing Clone",
-    "blurb": "Pixel-accurate clone with accessible notch nav and dot grid background.",
+    "id": "onlinemusicsampler",
+    "title": "BeatWise",
+    "blurb": "A web platform for music producers and beatmakers to discover, analyze, and sample YouTube tracks directly — featuring an interactive MPC interface, real-time metadata extraction, and a modern, dark aesthetic.",
     "year": "2025",
     "role": "Frontend",
     "tags": ["web", "ui"],
-    "image": "assets/img/ear3.webp",
-    "demo": "https://your-demo-link",
+    "image": "assets/img/beatwise_sample.png",
+    "demo": "https://beatwise.io",
     "source": "https://github.com/you/ear3"
   },
   {
