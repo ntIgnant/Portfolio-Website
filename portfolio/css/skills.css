@@ -156,12 +156,17 @@ body{
 /* --- END GENERAL DEFAULT STYLE --- */
 /* Specific styles for the different pages start from here... */
 
+.pagetitle-container{
+  text-align:center;
+  margin:40px 20px 20px 20px;
+}
+
 /* Container fills the viewport */
 .skills_wall {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  /* optional: your dot-grid bg */
+  
   background:
     radial-gradient(1200px 800px at 70% 10%, #eff3f6 10%, #dde5ea 55%, #cdd7de 100%),
     radial-gradient(rgba(0,0,0,.25) 0.5px, transparent 0.5px);
@@ -188,17 +193,17 @@ body{
   filter: drop-shadow(0 14px 26px rgba(0,0,0,.22));
 }
 
-/* Gentle float animation (each gets its own offset via CSS vars) */
+/* float animation  */
 @keyframes float {
   0%   { transform: translate(calc(var(--tx,0) - 6px), calc(var(--ty,0) - 4px)); }
   50%  { transform: translate(calc(var(--tx,0) + 6px), calc(var(--ty,0) + 4px)); }
   100% { transform: translate(calc(var(--tx,0) - 6px), calc(var(--ty,0) - 4px)); }
 }
 
-/* give phone screens a taller canvas so items can spread */
+/* give smaller viewports a taller canvas so items can spread */
 @media (max-width: 520px) {
   .skills_wall { min-height: 130vh; }
 }
 
-/* optional: keep items from hugging the notch/header */
+/* top padding to separate content from the header/notch */
 .skills_wall { padding-top: 60px; }
