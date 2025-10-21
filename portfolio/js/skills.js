@@ -21,7 +21,7 @@ const skills = [
 // ---- floating icons config ----
 const MIN_SIZE = 100;     // px
 const MAX_SIZE = 150;    // px
-const PADDING  = 170;     // distance from the edges
+const PADDING  = 70;     // distance from the edges
 const MAX_TRIES = 250;
 const DENSITY  = 0.90;   // icon overlap rate
 
