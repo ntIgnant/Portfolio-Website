@@ -2,33 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ignacio Aguirre — Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ignacio Aguirre — Portfolio</title>
 
-    <!-- DotGothic16 for the dotted menu look -->
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/skills.css">
+  <!-- DotGothic16 for the dotted font style -->
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/skills.css">
 </head>
 
 <body>
-    <!-- Header / notch -->
-    <header class="header_container">
-        <div class="top_notch_container">
-            <button id="menuToggle" class="notch_left icon_btn" aria-label="Open menu" aria-haspopup="dialog"
-                aria-expanded="false">
-                <img src="assets/img/icon/list.svg" alt="" />
-            </button>
+  <!-- Background vid (demo visualizer) -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="assets/video/visualizer01.mp4" type="video/mp4"> <!-- low quality / vintage pixeled video -->
+  </video>
 
-            <div class="notch_center">
-                <p>IGNACIO AGUIRRE</p>
-            </div>
+  <!-- Header / notch -->
+  <header class="header_container">
+    <div class="top_notch_container">
+      <button id="menuToggle" class="notch_left icon_btn" aria-label="Open menu" aria-haspopup="dialog" aria-expanded="false">
+        <img src="assets/img/icon/list.svg" alt="">
+      </button>
 
-            <a class="notch_right icon_btn" href="#contact" aria-label="Go to contact">
-                <img src="assets/img/icon/bag.svg" alt="" />
-            </a>
-        </div>
-    </header>
+      <div class="notch_center">
+        <p>IGNACIO AGUIRRE</p>
+      </div>
+
+      <a class="notch_right icon_btn" href="#contact" aria-label="Go to contact">
+        <img src="assets/img/icon/bag.svg" alt="">
+      </a>
+    </div>
+  </header>
 
     <!-- GLIDER (overlay) -->
     <aside id="glider" class="glider" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden>
@@ -59,7 +63,7 @@
 
     <!-- Page Title -->
     <div class="pagetitle-container">
-        <h1>SKILLS</h1>
+        <h1>[SKILLS]</h1>
     </div>
 
     <main class="skills_wall">
