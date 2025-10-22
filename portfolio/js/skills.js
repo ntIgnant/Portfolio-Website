@@ -19,11 +19,11 @@ const skills = [
 ];
 
 // ---- floating icons config ----
-const MIN_SIZE = 100;     // px
+const MIN_SIZE = 120;     // px
 const MAX_SIZE = 150;    // px
 const PADDING  = 70;     // distance from the edges
 const MAX_TRIES = 250;
-const DENSITY  = 0.90;   // icon overlap rate
+const DENSITY  = 1;   // icon overlap rate
 
 // icon collision detection function (responsive for phone screens)
 function responsiveConfig(W) {
