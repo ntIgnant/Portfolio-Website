@@ -6,18 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ignacio Aguirre — Portfolio</title>
 
-  <!-- DotGothic16 for the dotted menu look -->
+  <!-- DotGothic16 for the dotted font style -->
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+  <!-- Background vid (demo visualizer) -->
+  <video autoplay muted loop playsinline id="bgVideo">
+    <source src="assets/video/visualizer01.mp4" type="video/mp4"> <!-- low quality / vintage pixeled video -->
+  </video>
+
   <!-- Header / notch -->
   <header class="header_container">
     <div class="top_notch_container">
-      <button id="menuToggle" class="notch_left icon_btn" aria-label="Open menu" aria-haspopup="dialog"
-        aria-expanded="false">
-        <img src="assets/img/icon/list.svg" alt="" />
+      <button id="menuToggle" class="notch_left icon_btn" aria-label="Open menu" aria-haspopup="dialog" aria-expanded="false">
+        <img src="assets/img/icon/list.svg" alt="">
       </button>
 
       <div class="notch_center">
@@ -25,7 +29,7 @@
       </div>
 
       <a class="notch_right icon_btn" href="#contact" aria-label="Go to contact">
-        <img src="assets/img/icon/bag.svg" alt="" />
+        <img src="assets/img/icon/bag.svg" alt="">
       </a>
     </div>
   </header>
