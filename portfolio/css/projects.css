@@ -1,32 +1,101 @@
-:root{
+:root {
   --bg: #e9eef1;
   --fg: #0b0f14;
   --fg-dim: #3c4550;
-  --glass: rgba(255,255,255,0.65);
-  --ring: rgba(0,0,0,0.12);
+  --glass: rgba(255, 255, 255, 0.65);
+  --ring: rgba(0, 0, 0, 0.12);
   --blur: 18px;
   --radius: 18px;
   --speed: 300ms;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+  margin: 0;
   font-family: "DotGothic16", sans-serif;
   color: var(--fg);
-  /* background: radial-gradient(#000 0.8px, transparent 0.5px); */
-  background-size: 160px 160px;
-  background: radial-gradient(1200px 800px at 70% 10%, #eff3f6 10%, #dde5ea 55%, #cdd7de 100%);
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--bg);
+}
+
+/* Background video visualizer */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.95) saturate(1.05) hue-rotate(10deg); /* green tint overlay */
+}
+
+/* Gaussian blur and tint overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(220, 240, 230, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* grain noise overlay for the video */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    repeating-radial-gradient(rgba(0, 0, 0, 0.06) 0.5px, transparent 1px),
+    repeating-linear-gradient(rgba(0, 0, 0, 0.05) 0.5px, transparent 1px);
+  mix-blend-mode: overlay;
+  opacity: 0.2;
+  animation: grainMove 2.5s steps(4) infinite;
+}
+
+@keyframes grainMove {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-1%, 1%); }
+  50% { transform: translate(1%, -1%); }
+  75% { transform: translate(0.5%, 0.5%); }
+}
+
+
+/* Fullscreen background video */
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(0.95) saturate(1.1);
+}
+
+
+@keyframes grainMove {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-1%, 1%); }
+  50% { transform: translate(1%, -1%); }
+  75% { transform: translate(0.5%, 0.5%); }
 }
 
 /* Notch header */
 .header_container{position:sticky;top:0;z-index:20;padding:10px}
 .top_notch_container{
   display:flex;align-items:center;justify-content:space-between;
-  max-width:600px;margin:0 auto;background:var(--glass);
+  max-width:500px;margin:0 auto;background:var(--glass);
   border:1px solid var(--ring);backdrop-filter: blur(var(--blur));
-  padding:10px 14px;border-radius:16px;
+  padding:10px 14px;border-radius:9px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.7);
 }
 
