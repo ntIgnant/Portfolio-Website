@@ -50,3 +50,4 @@ glider.querySelectorAll('.glider_link').forEach(a => {
     setTimeout(closeGlider, 80);
   });
 });
+
