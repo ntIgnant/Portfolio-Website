@@ -12,7 +12,7 @@
   },
   {
     "id": "mltool",
-    "title": "Image Classifier",
+    "title": "Socket Programming (NETS1 CW HERE...)",
     "blurb": "CNN trained on custom dataset with Grad-CAM visualizations.",
     "year": "2024",
     "role": "ML",
