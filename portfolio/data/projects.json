@@ -11,13 +11,13 @@
     "source": "https://github.com/you/ear3"
   },
   {
-    "id": "mltool",
-    "title": "Socket Programming (NETS1 CW HERE...)",
+    "id": "socketProg",
+    "title": "Socket Programming",
     "blurb": "CNN trained on custom dataset with Grad-CAM visualizations.",
     "year": "2024",
     "role": "ML",
     "tags": ["ml"],
-    "image": "assets/img/mltool.webp",
+    "image": "assets/img/images/socketProg.png",
     "demo": "#",
     "source": "https://github.com/you/mltool"
   }
