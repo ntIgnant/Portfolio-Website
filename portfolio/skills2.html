@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ignacio Aguirre — Portfolio</title>
+
+    <!-- DotGothic16 for the dotted font style -->
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/skills2.css">
+</head>
+
+<body>
+    <!-- Background vid (demo visualizer) -->
+    <video autoplay muted loop playsinline id="bgVideo">
+        <source src="assets/video/visualizer01.mp4" type="video/mp4"> <!-- low quality / vintage pixeled video -->
+    </video>
+
+    <!-- Header / notch -->
+    <header class="header_container">
+        <div class="top_notch_container">
+            <button id="menuToggle" class="notch_left icon_btn" aria-label="Open menu" aria-haspopup="dialog"
+                aria-expanded="false">
+                <img src="assets/img/icon/list.svg" alt="">
+            </button>
+
+            <div class="notch_center">
+                <p>IGNACIO AGUIRRE</p>
+            </div>
+
+            <a class="notch_right icon_btn" href="#contact" aria-label="Go to contact">
+                <img src="assets/img/icon/bag.svg" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- GLIDER (overlay) -->
+    <aside id="glider" class="glider" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden>
+        <div class="glider_inner" tabindex="-1">
+            <div class="glider_header">
+                <button id="menuClose" class="icon_btn" aria-label="Close menu">
+                    ✕
+                </button>
+                <p id="menuTitle" class="brand">IGNACIO AGUIRRE</p>
+                <span aria-hidden="true" class="status_dot"></span>
+            </div>
+
+            <nav class="glider_nav" aria-label="Main">
+                <a class="glider_link" href="main.html">HOME</a>
+                <a class="glider_link" href="projects.html">PROJECTS</a>
+                <a class="glider_link" href="skills.html">SKILLS</a>
+                <a class="glider_link" href="aboutme.html">ABOUT ME</a>
+                <a class="glider_link" href="contact.html">CONTACT</a>
+            </nav>
+
+            <footer class="glider_footer">
+                <a href="mailto:ignacio.aguirre.armijos@gmail.com">EMAIL</a>
+                <a href="https://github.com/ntIgnant" target="_blank" rel="noreferrer">GITHUB</a>
+                <a href="assets/ignacio_cv.pdf" target="_blank" rel="noreferrer">CV</a>
+            </footer>
+        </div>
+    </aside>
+
+    <!-- Page Title -->
+    <div class="pagetitle-container">
+        <h1>[SKILLS]</h1>
+    </div>
+
+    <section class="description_section">
+        <div class="description_container">
+            <!-- <h2>Description</h2> -->
+            <p>
+                A collection of personal and academic projects — exploring software development, data science, and
+                interactive web applications that have a real purpose of creation.
+            </p>
+            <!-- <a href="#" class="description_btn">Learn More</a> -->
+        </div>
+    </section>
+
+
+    <div class="main-col-cont">
+        <div class="main-row-cont">
+            <!-- I need to put the skills here -->
+        </div>
+    </div>
+
+    <div class="main-col-cont">
+        <div class="main-row-cont">
+            <div class="cell"><img src="assets/img/icon/javascript-icon.svg" alt="javascript-icon"></div>
+            <div class="cell"><img src="assets/img/icon/w3_css-official.svg" alt="css-icon"></div>
+            <div class="cell"><img src="assets/img/icon/w3_html5-icon.svg" alt="html-icon"></div>
+            <div class="cell"><img src="assets/img/icon/nodejs-ar21.svg" alt="nodejs-icon"></div>
+            <div class="cell"><img src="assets/img/icon/expressjs-icon.svg" alt="expressjs-icon"></div>
+        </div>
+        <div class="main-row-cont">
+            <div class="cell"><img src="assets/img/icon/python-icon.svg" alt="python-icon"></div>
+            <div class="cell"><img src="assets/img/icon/java-vertical.svg" alt="java-icon"></div>
+        </div>
+        <div class="main-row-cont">
+            <div class="cell"><img src="assets/img/icon/linux-icon.svg" alt="linux-icon"></div>
+            <div class="cell"><img src="assets/img/icon/git-scm-ar21.svg" alt="git-icon"></div>
+            <div class="cell"><img src="assets/img/icon/archlinux-icon.svg" alt="arch-icon"></div>
+            <div class="cell"><img src="assets/img/icon/neovimio-ar21.svg" alt="nvim-icon"></div>
+            <div class="cell"><img src="assets/img/icon/visualstudio_code-ar21.svg" alt="vscode-icon"></div>
+        </div>
+    </div>
+
+
+
+    <script type="module" src="js/skills.js" defer></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

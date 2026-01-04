@@ -15,8 +15,8 @@
     "title": "Socket Programming",
     "blurb": "CNN trained on custom dataset with Grad-CAM visualizations.",
     "year": "2024",
-    "role": "ML",
-    "tags": ["ml"],
+    "role": "Net",
+    "tags": ["net"],
     "image": "assets/img/images/socketProg.png",
     "demo": "#",
     "source": "https://github.com/you/mltool"
